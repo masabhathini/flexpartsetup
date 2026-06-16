@@ -1,0 +1,235 @@
+=====================FORMER PATHNAMES FILE===================
+./
+
+./AVAILABLE
+=============================================================
+=====================FORMER COMMAND FILE=====================
+    1                LDIRECT:          1 for forward simulation, -1 for backward simulation
+    [startdate] 000000  YYYYMMDD HHMISS   beginning date of simulation
+    [enddate] 230000  YYYYMMDD HHMISS   ending date of simulation
+    3600             SSSSS  (int)      output every SSSSS seconds
+    3600             SSSSS  (int)      time average of output (in SSSSS seconds)
+    180              SSSSS  (int)      sampling rate of output (in SSSSS seconds)
+    999999999        SSSSS  (int)      time constant for particle splitting (in seconds)
+    180              SSSSS  (int)      synchronisation interval of flexpart (in seconds)
+    -1.              CTL    (real)     factor by which time step must be smaller than tl
+    1                IFINE  (int)      decrease of time step for vertical motion by factor ifine
+    1                IOUT              1 concentration, 2 mixing ratio, 3 both, 4 plume traject, 5=1+4
+    2                IPOUT             particle dump: 0 no, 1 every output interval, 2 only at end
+    0                LSUBGRID          subgrid terrain effect parameterization: 1 yes, 0 no
+    0                LCONVECTION       convection: 3 yes, 0 no
+    3600.            DT_CONV  (real)   time interval to call convection, seconds
+    1                LAGESPECTRA       age spectra: 1 yes, 0 no
+    0                IPIN              continue simulation with dumped particle data: 1 yes, 0 no
+    0                IFLUX             calculate fluxes: 1 yes, 0 no
+    1                IOUTPUTFOREACHREL CREATE AN OUPUT FILE FOR EACH RELEASE LOCATION: 1 YES, 0 NO
+    0                MDOMAINFILL       domain-filling trajectory option: 1 yes, 0 no, 2 strat. o3 tracer
+    1                IND_SOURCE        1=mass unit , 2=mass mixing ratio unit
+    1                IND_RECEPTOR      1=mass unit , 2=mass mixing ratio unit
+    0                NESTED_OUTPUT     shall nested output be used? 1 yes, 0 no
+    0                LINIT_COND        INITIAL COND. FOR BW RUNS: 0=NO,1=MASS UNIT,2=MASS MIXING RATIO UNIT
+    1                TURB_OPTION       0=no turbulence; 1=diagnosed as in flexpart_ecmwf; 2 and 3=from tke.
+    0                LU_OPTION         0=old landuse (IGBP.dat); 1=landuse from WRF
+    1                CBL SCHEME        0=no, 1=yes. works if TURB_OPTION=1
+    1                SFC_OPTION        0=default computation of u*, hflux, pblh, 1=from wrf
+    0                WIND_OPTION       0=snapshot winds, 1=mean winds,2=snapshot eta-dot,-1=w based on divergence
+    0                TIME_OPTION       1=correction of time validity for time-average wind,  0=no need
+    0                OUTGRID_COORD     0=wrf grid(meters), 1=regular lat/lon grid
+    1                RELEASE_COORD     0=wrf grid(meters), 1=regular lat/lon grid
+    2                IOUTTYPE          0=default binary, 1=ascii (for particle dump only),2=netcdf
+    72               NCTIMEREC (int)   Time frames per output file, only used for netcdf
+    0                VERBOSE           VERBOSE MODE,0=minimum, 100=maximum
+=====================FORMER AGECLASESS FILE==================
+    1                NAGECLASS        number of age classes
+    999999999
+=====================FORMER OUTGRID FILE=====================
+ [bboxll_lon]            OUTLONLEFT      geograhical longitude of lower left corner of output grid
+ [bboxll_lat]            OUTLATLOWER     geographical latitude of lower left corner of output grid
+   [gridx]               NUMXGRID        number of grid points in x direction (= # of cells )
+   [gridy]               NUMYGRID        number of grid points in y direction (= # of cells )
+    1                OUTGRIDDEF      outgrid defined 0=using grid distance, 1=upperright corner coordinate
+ [gridx * 4000].0           DXOUTLON        grid distance in x direction or upper right corner of output grid
+ [gridy * 4000].0           DYOUTLON        grid distance in y direction or upper right corner of output grid
+        33                NUMZGRID        number of vertical levels
+    27.22
+    52.84
+    77.63
+    115.99
+    189.59
+    273.33
+    367.29
+    471.28
+    595.52
+    739.88
+    903.95
+    1087.50
+    1290.55
+    1523.69
+    1786.75
+    2079.12
+    2400.50
+    2760.09
+    3159.34
+    3596.42
+    4072.81
+    4551.86
+    5032.84
+    5514.58
+    5996.97
+    6480.61
+    6965.83
+    7453.05
+    7943.39
+    8438.90
+    8941.04
+    9451.85
+    9973.07
+=====================FORMER RECEPTOR FILE====================
+    22                NUMRECEPTOR     number of receptors
+    Safaniya_Oil_Field
+    530
+    526
+    Marjan_Oil_Field
+    552
+    530
+    Zuluf_Oil_Field
+    543
+    530
+    Manifa_Oil_Field
+    537
+    507
+    Berri_Oil_Field
+    552
+    500
+    Karan_Gas_Field
+    556
+    511
+    Al-Khafji_(KJO)
+    524
+    530
+    Tanajib_Terminal
+    534
+    513
+    Manifa_Plant
+    535
+    507
+    Ras_Tanura_Terminal
+    563
+    482
+    Shaybah_Oil_Field
+    658
+    375
+    Khafji
+    524
+    530
+    Al_Jubail
+    552
+    491
+    Dammam
+    563
+    476
+    Al_Khobar
+    565
+    472
+    Shaybah_CPF
+    656
+    374
+    Jafurah_Gas_Plant
+    567
+    450
+    Abqaiq_Plants
+    554
+    463
+    Qurayyah_Sea_WP
+    564
+    462
+    Haradh_Gas_Plant
+    542
+    414
+    Hawiyah_Gas_Plant
+    546
+    433
+    Uthmaniyah_Gas_Plant
+    545
+    444
+=====================FORMER SPECIES FILE=====================
+     1               NUMTABLE        number of variable properties. The following lines are fixed format
+XXXX|NAME    |decaytime |wetscava  |wetsb|drydif|dryhenry|drya|partrho  |parmean|partsig|dryvelo|weight |
+    Cs-137        -999.9    1.0E-04  0.80   -9.9                  2.5E03  6.0E-7  3.0E-1   -9.99   -9.99
+=====================FORMER RELEEASES FILE===================
+   1                NSPEC           total number of species emitted
+   0                EMITVAR         1 for emission variation 
+   1                LINK            index of species in file SPECIESES
+6                 NUMPOINT        number of releases
+20250710 150000
+20250712 150000
+50.9042
+34.2605
+50.9042
+34.2605
+    1
+    120.0
+    500.0
+    10000
+    100000.0
+Fordow
+20250710 150000
+20250712 150000
+50.8279
+28.9145
+50.8279
+28.9145
+    1
+    120.0
+    500.0
+    10000
+    100000.0
+Bushehr
+20250710 150000
+20250712 150000
+51.6660
+32.6539
+51.6660
+32.6539
+    1
+    120.0
+    500.0
+    10000
+    100000.0
+Isfahan
+20250710 150000
+20250712 150000
+51.3347
+35.7219
+51.3347
+35.7219
+    1
+    120.0
+    500.0
+    10000
+    100000.0
+Tehran
+20250710 150000
+20250712 150000
+51.9137
+33.5074
+51.9137
+33.5074
+    1
+    120.0
+    500.0
+    10000
+    100000.0
+Natanz
+20250710 150000
+20250712 150000
+34.7818
+32.0853
+34.7818
+32.0853
+    1
+    120.0
+    500.0
+    10000
+    100000.0
+Tel_Aviv
