@@ -5,8 +5,8 @@
 =============================================================
 =====================FORMER COMMAND FILE=====================
     1                LDIRECT:          1 for forward simulation, -1 for backward simulation
-    [startdate] 000000  YYYYMMDD HHMISS   beginning date of simulation
-    [enddate] 230000  YYYYMMDD HHMISS   ending date of simulation
+    [met_startdate] [met_starthour]0000  YYYYMMDD HHMISS   beginning date of simulation
+    [met_enddate] [met_endhour]0000  YYYYMMDD HHMISS   ending date of simulation
     3600             SSSSS  (int)      output every SSSSS seconds
     3600             SSSSS  (int)      time average of output (in SSSSS seconds)
     180              SSSSS  (int)      sampling rate of output (in SSSSS seconds)
@@ -155,81 +155,21 @@
 =====================FORMER SPECIES FILE=====================
      1               NUMTABLE        number of variable properties. The following lines are fixed format
 XXXX|NAME    |decaytime |wetscava  |wetsb|drydif|dryhenry|drya|partrho  |parmean|partsig|dryvelo|weight |
-    Cs-137        -999.9    1.0E-04  0.80   -9.9                  2.5E03  6.0E-7  3.0E-1   -9.99   -9.99
+[pollutant_table]
 =====================FORMER RELEEASES FILE===================
    1                NSPEC           total number of species emitted
    0                EMITVAR         1 for emission variation 
    1                LINK            index of species in file SPECIESES
-6                 NUMPOINT        number of releases
-20250710 150000
-20250712 150000
-50.9042
-34.2605
-50.9042
-34.2605
+[emis_sitescount]                 NUMPOINT        number of releases
+[emisstartdate] [emisstarthour]0000
+[emisenddate] [emisendhour]0000
+[emis_bbox_ll_lon]
+[emis_bbox_ll_lat]
+[emis_bbox_ll_lon]
+[emis_bbox_ll_lat]
     1
-    120.0
+    [release height].0
     500.0
-    10000
-    100000.0
-Fordow
-20250710 150000
-20250712 150000
-50.8279
-28.9145
-50.8279
-28.9145
-    1
-    120.0
-    500.0
-    10000
-    100000.0
-Bushehr
-20250710 150000
-20250712 150000
-51.6660
-32.6539
-51.6660
-32.6539
-    1
-    120.0
-    500.0
-    10000
-    100000.0
-Isfahan
-20250710 150000
-20250712 150000
-51.3347
-35.7219
-51.3347
-35.7219
-    1
-    120.0
-    500.0
-    10000
-    100000.0
-Tehran
-20250710 150000
-20250712 150000
-51.9137
-33.5074
-51.9137
-33.5074
-    1
-    120.0
-    500.0
-    10000
-    100000.0
-Natanz
-20250710 150000
-20250712 150000
-34.7818
-32.0853
-34.7818
-32.0853
-    1
-    120.0
-    500.0
-    10000
-    100000.0
-Tel_Aviv
+    [emis_release_particles]
+    [emis_release_mass].0
+[emis_location_name]
